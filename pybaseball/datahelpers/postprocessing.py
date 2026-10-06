@@ -38,7 +38,7 @@ def try_parse_dataframe(
         data_copy = data_copy.convert_dtypes(convert_string=False)
 
     string_columns = [
-        dtype_tuple[0] for dtype_tuple in data_copy.dtypes.items() if str(dtype_tuple[1]) in ["object", "string"]
+        dtype_tuple[0] for dtype_tuple in data_copy.dtypes.items() if str(dtype_tuple[1]) in ["object", "string", "str"]
     ]
     for column in string_columns:
         # Only check the first value of the column and test that;
